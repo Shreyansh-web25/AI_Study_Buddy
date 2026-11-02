@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Study Buddy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-icon">✦</span><div><b>Study Buddy</b><small>AI learning assistant</small></div></div>
+      <div class="side-label">YOUR WORKSPACE</div>
+      <button class="nav-item active" id="newChat">＋ &nbsp; New chat</button>
+      <div class="side-card">
+        <div class="sparkle">✧</div>
+        <b>Learn at your pace</b>
+        <p>Ask questions, understand concepts and practise new topics.</p>
+      </div>
+      <div class="sidebar-bottom">Built with Gemini AI<br><span>Keep learning. Keep growing.</span></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div><span class="online-dot"></span> AI Tutor <span class="badge">BETA</span></div>
+        <button class="clear-btn" id="clearChat">Clear chat</button>
+      </header>
+
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <div class="hero-icon">✦</div>
+          <p class="eyebrow">YOUR PERSONAL AI STUDY PARTNER</p>
+          <h1>What are we learning<br><span>today?</span></h1>
+          <p class="welcome-copy">Ask anything. Get clear explanations, examples and step-by-step help.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Explain recursion in C with a simple example."><span>⌘</span><b>Learn a concept</b><small>Explain recursion in C</small></button>
+            <button class="suggestion" data-prompt="Create 5 beginner-level MCQs on computer networks with answers."><span>☷</span><b>Practise with MCQs</b><small>Computer networks quiz</small></button>
+            <button class="suggestion" data-prompt="Make a simple 7-day study plan for learning Python."><span>◷</span><b>Make a study plan</b><small>Learn Python in 7 days</small></button>
+          </div>
+        </div>
+        <div id="messages" class="messages"></div>
+      </section>
+
+      <div class="composer-wrap">
+        <div class="subject-row">
+          <label for="subject">SUBJECT</label>
+          <select id="subject">
+            <option>General</option><option>Programming</option><option>Computer Science</option>
+            <option>Mathematics</option><option>Science</option><option>English</option>
+          </select>
+        </div>
+        <form id="chatForm" class="composer">
+          <textarea id="messageInput" rows="1" placeholder="Ask your study question..." required></textarea>
+          <button id="sendBtn" type="submit" aria-label="Send message">↑</button>
+        </form>
+        <p class="disclaimer">AI can make mistakes. Verify important information with your teacher or textbook.</p>
+      </div>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
